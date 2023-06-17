@@ -2,9 +2,9 @@ name: Makefile CI
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "release-2.4.99.1" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "release-2.4.99.1" ]
 
 jobs:
   build:
@@ -14,9 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: configure
-      run: ./configure
-
+    
     - name: Install dependencies
       run: make
 
